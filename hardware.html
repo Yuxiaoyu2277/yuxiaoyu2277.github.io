@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>紙鶴 - 掌上閲讀器</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		/* 导航栏样式 */
+		.navbar {
+			background-color: white;
+			overflow: hidden;
+			display: flex;
+			align-items: center;
+		}
+
+		.navbar a {
+			float: left;
+			color: #888;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-size: 17px;
+		}
+
+		.navbar a:hover {
+			color: black;
+		}
+
+		.navbar .lang-toggle {
+			float: right;
+			color: #888;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-size: 17px;
+		}
+
+		.navbar .logo {
+			margin-right: auto;
+			padding: 10px;
+		}
+
+		/* 首页内容样式 */
+		.container {
+			display: flex;
+		}
+
+		.left-column {
+			width: 15%;
+			background-color: #D2B48C;
+			border-radius: 10px;
+			color: white;
+			padding: 20px;
+		}
+
+		.right-column {
+			width: 85%;
+			padding: 20px;
+		}
+		
+		.left-column ul {
+			list-style-type: none;
+			padding: 0px;
+		}
+
+		.left-column li {
+			margin-bottom: 5px;
+		}
+
+		.left-column li:hover {
+			background-color: #888;
+			border-radius: 10px;
+			color: white;
+		}	
+		
+		
+
+		/* 页脚样式 */
+		.footer {
+			background-color: #D2B48C;;
+			overflow: hidden;
+			border-radius: 15px;
+		}
+
+		.footer p {
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			margin: 0;
+			font-size: 17px;
+		}
+
+	</style>
+</head>
+<body>
+	<!-- 导航栏 -->
+	<div class="navbar">
+		<a class="logo" href="#home"><img src="logo.png" alt="Logo" width="132" height="89.5"></a>
+		<a href="index.html">首頁</a>
+		<a href="hardware.html">硬件介紹</a>
+		<a href="docs.html">開發文檔</a>
+		<a href="contact.html">聯係作者</a>
+		<a href="english.html">中/EN</a>
+	</div>
+
+	<!-- 首页内容 -->
+	<div class="container">
+		<div class="left-column">
+			<!-- 左侧内容，以列表形式展示 -->
+			<ul id="list">
+				<li data-content="内容1">列表项 1</li>
+				<li data-content="内容2">列表项 2</li>
+				<li data-content="内容3">列表项 3</li>
+				<!-- 添加更多列表项 -->
+			</ul>
+		</div>
+		<div class="right-column">
+			<!-- 右侧内容，以文字形式展示 -->
+			<p id="content">点击列表项查看内容。</p>
+		</div>
+	</div>
+
+	<!-- 页脚 -->
+	<div class="footer">
+		<p>联系方式：QQ:2277236944</p>
+	</div>
+	
+	<script>
+		// 获取列表项和内容元素
+		const listItems = document.querySelectorAll('#list li');
+		const contentElement = document.getElementById('content');
+
+		// 为每个列表项添加点击事件处理程序
+		listItems.forEach(item => {
+			item.addEventListener('click', () => {
+				// 获取被点击列表项的内容
+				const itemContent = item.getAttribute('data-content');
+				// 更新右侧内容
+				contentElement.textContent = itemContent;
+			});
+		});
+	</script>
+	
+</body>
+</html>

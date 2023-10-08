@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>紙鶴 - 掌上閲讀器</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+		/* 导航栏样式 */
+		.navbar {
+			background-color: white;
+			overflow: hidden;
+			display: flex;
+			align-items: center;
+		}
+
+		.navbar a {
+			float: left;
+			color: #888;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-size: 17px;
+		}
+
+		.navbar a:hover {
+			color: black;
+		}
+
+		.navbar .lang-toggle {
+			float: right;
+			color: #888;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-size: 17px;
+		}
+
+		.navbar .logo {
+			margin-right: auto;
+			padding: 10px;
+		}
+
+		/* 页脚样式 */
+		.footer {
+			background-color: #D2B48C;;
+			overflow: hidden;
+			border-radius: 15px;
+		}
+
+		.footer p {
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			margin: 0;
+			font-size: 17px;
+		}
+        
+		/* 页面内容样式 */
+		.content {
+			padding: 16px;
+			margin-top: 50px;
+			text-align: center;
+		}
+
+		.product-name {
+			font-size: 24px;
+			font-weight: bold;
+			margin-bottom: 20px;
+			color: #D2B48C;
+		}
+
+		.product-description {
+			margin-bottom: 20px;
+		}
+
+		.product-image {
+			max-width: 100%;
+			height: auto;
+			margin-bottom: 20px;
+		}
+
+		.product-info {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 20px;
+		}
+
+		.product-info .product-image {
+			flex: 1;
+			margin-right: 20px;
+		}
+
+		.product-info .product-description {
+			flex: 1;
+		}
+
+		.product-info-reverse {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 20px;
+		}
+
+		.product-info-reverse .product-image {
+			flex: 1;
+			margin-left: 20px;
+		}
+
+		.product-info-reverse .product-description {
+			flex: 1;
+		}
+
+		.background-image {
+			background-image: url('background.jpg');
+			background-size: cover;
+			background-position: center;
+			padding: 100px 0;
+		}
+	</style>
+</head>
+<body>
+	<!-- 导航栏 -->
+	<div class="navbar">
+		<a class="logo" href="#home"><img src="logo.png" alt="Logo" width="132" height="89.5"></a>
+		<a href="en_index.html">Home</a>
+		<a href="en_hardware.html">Hardware introduction</a>
+		<a href="en_docs.html">Develop document</a>
+		<a href="en_contact.html">Contact me</a>
+		<a href="index.html">中/EN</a>
+	</div>
+	
+	
+	<!-- 首页内容 -->
+	<div class="content background-image">
+		<div class="product-name">紙鶴</div>
+		<div class="product-name"><p>紙鶴，閲讀飛躍于掌上的文字</p></div>
+	
+	</div>
+
+	<!-- 产品介绍布局1 -->
+	<div class="content">
+		<div class="product-info">
+			<div class="product-image">
+				<img src="product1.jpg" alt="产品图片">
+			</div>
+			<div class="product-description">
+				<p>紙鶴</p>
+				<p></p>
+			</div>
+		</div>
+	</div>
+
+	<!-- 产品介绍布局2 -->
+	<div class="content">
+		<div class="product-info-reverse">
+			<div class="product-image">
+				<img src="product2.jpg" alt="产品图片">
+			</div>
+			<div class="product-description">
+				<p>产品介绍文字...</p>
+			</div>
+		</div>
+	</div>
+	
+	
+	<!-- 页脚 -->
+	<div class="footer">
+		<p>联系方式：QQ:2277236944</p>
+	</div>
+</body>
+</html>
